@@ -1,0 +1,600 @@
+/* ==========================================================================
+   Login Page Styling
+   ========================================================================== */
+.login-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #e2e8f0 0%, #cbd5e1 100%);
+}
+
+.login-header-banner {
+  background-color: var(--gov-navy);
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 12px;
+  border-bottom: 2px solid #0f172a;
+}
+
+.login-main-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  border: 1px solid var(--gov-border-dark);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 460px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.login-box-header {
+  padding: 24px 28px 18px 28px;
+  text-align: center;
+  border-bottom: 1px solid var(--gov-border);
+  background-color: #ffffff;
+}
+
+.login-logo {
+  height: 54px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.login-system-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--gov-navy);
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.login-system-sub {
+  font-size: 12px;
+  color: var(--gov-text-sub);
+  font-weight: 500;
+}
+
+.login-form-body {
+  padding: 24px 28px;
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gov-text-main);
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--font-gov);
+  border: 1px solid var(--gov-border-dark);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.15s ease;
+  background-color: #fafafa;
+}
+
+.form-input:focus {
+  border-color: var(--gov-blue-accent);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.login-error-alert {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--gov-red-alert);
+  padding: 10px 14px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.security-options-box {
+  background-color: #f8fafc;
+  border: 1px solid var(--gov-border);
+  padding: 10px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: var(--gov-text-sub);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.security-option-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: var(--gov-blue);
+  color: #ffffff;
+  border: 1px solid var(--gov-navy);
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.login-submit-btn:hover {
+  background-color: var(--gov-navy);
+}
+
+.login-footer-notice {
+  padding: 14px 28px;
+  background-color: #f1f5f9;
+  border-top: 1px solid var(--gov-border);
+  font-size: 11px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Loading Animation Overlay
+   ========================================================================== */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.loading-card {
+  background-color: #ffffff;
+  color: var(--gov-text-main);
+  border-top: 4px solid var(--gov-blue-accent);
+  padding: 32px 40px;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 440px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+.loading-spinner-ring {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid var(--gov-blue-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--gov-navy);
+  margin-bottom: 8px;
+}
+
+.loading-step-text {
+  font-size: 13px;
+  color: var(--gov-blue-accent);
+  font-weight: 600;
+  margin-bottom: 16px;
+  min-height: 20px;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--gov-blue-accent);
+  transition: width 0.2s ease;
+}
+
+/* ==========================================================================
+   Main Dashboard Layout (Document System)
+   ========================================================================== */
+.main-dashboard {
+  padding: 24px 0 40px 0;
+}
+
+.dashboard-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 14px 20px;
+  border: 1px solid var(--gov-border);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: var(--gov-shadow);
+}
+
+.dashboard-page-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--gov-navy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.document-system-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .document-system-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Document Paper Styling (Image 1 Exact Layout) */
+.doc-outer-card {
+  background-color: #ffffff;
+  border: 2px solid #334155;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  border-radius: 2px;
+}
+
+.doc-system-header-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--gov-navy);
+  padding: 10px;
+  border: 1.5px solid #1e293b;
+  margin-bottom: 20px;
+  background-color: #f8fafc;
+  letter-spacing: -0.3px;
+}
+
+.doc-inner-border {
+  border: 1.5px solid #334155;
+  padding: 24px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.doc-main-heading {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  word-break: keep-all;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+.doc-meta-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.doc-meta-table td {
+  padding: 4px 0;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.doc-meta-label {
+  font-weight: 800;
+  width: 90px;
+  vertical-align: top;
+}
+
+.doc-content-body {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #1e293b;
+  white-space: pre-line;
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.doc-edit-input {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 8px 10px;
+  font-family: var(--font-gov);
+  border: 1px solid var(--gov-blue-accent);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.doc-edit-textarea {
+  width: 100%;
+  height: 240px;
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 10px;
+  font-family: var(--font-gov);
+  border: 1px solid var(--gov-blue-accent);
+  border-radius: 2px;
+  resize: vertical;
+}
+
+.doc-footer-date {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.doc-footer-sign {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+.official-seal-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #dc2626;
+  color: #dc2626;
+  font-size: 10px;
+  font-weight: 900;
+  font-family: var(--font-serif);
+  line-height: 1.1;
+  text-align: center;
+  border-radius: 4px;
+  transform: rotate(-4deg);
+  background-color: rgba(254, 242, 242, 0.5);
+  box-shadow: 0 0 2px rgba(220, 38, 38, 0.4);
+}
+
+/* Metadata Panel (Right Box in Image 1) */
+.metadata-panel-card {
+  background-color: #ffffff;
+  border: 1.5px solid #334155;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 18px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metadata-panel-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--gov-navy);
+  border-bottom: 2px solid var(--gov-navy);
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meta-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.meta-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-info-key {
+  font-weight: 700;
+  color: var(--gov-text-sub);
+}
+
+.meta-info-val {
+  font-weight: 600;
+  color: var(--gov-text-main);
+  word-break: break-all;
+}
+
+.meta-status-highlight {
+  background-color: #fffbebf3;
+  border: 1px solid #fde68a;
+  padding: 6px 8px;
+  border-radius: 2px;
+  color: #b45309;
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta-status-canceled {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 6px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action Buttons Box (Image 1 bottom right: 수정 / 저장 / 예약취소) */
+.action-buttons-group {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.action-buttons-group .btn {
+  flex: 1;
+}
+
+/* Progress gauge (Image 1 95% progress bar) */
+.progress-panel-box {
+  margin-top: 10px;
+}
+
+.progress-panel-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gov-text-sub);
+  margin-bottom: 4px;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 14px;
+  background-color: #e2e8f0;
+  border: 1px solid var(--gov-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-fill-blue {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  transition: width 0.3s ease;
+}
+
+/* Original scan reference box */
+.original-scan-toggle {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #f8fafc;
+  border: 1px dashed var(--gov-border-dark);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Artifact Surveillance Tab */
+.surveillance-container {
+  background-color: #ffffff;
+  border: 1px solid var(--gov-border);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.alarm-alert-banner {
+  background-color: #fef2f2;
+  border: 2px solid #dc2626;
+  color: #991b1b;
+  padding: 14px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  animation: pulseAlert 1.5s infinite alternate;
+}
+
+@keyframes pulseAlert {
+  0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  100% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+}
+
+.surveillance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.cctv-card {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+
+.cctv-header {
+  background-color: #1e293b;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cctv-screen {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(circle, #1e293b 0%, #020617 100%);
+  padding: 16px;
+  text-align: center;
+}
+
+.cctv-screen.breached {
+  background: radial-gradient(circle, #450a0a 0%, #020617 100%);
+  border: 2px solid #dc2626;
+}
